@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join QForms – Create your free account</title>
+  <meta name="description" content="Create your free QForms account and start earning rewards for your opinions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/register.css" />
+</head>
+<body class="register-page">
+
+  <header class="header">
+    <div class="container nav">
+      <a href="../" class="logo">
+        <span class="logo-mark">Q</span>
+        <span>Q<strong>Forms</strong></span>
+      </a>
+      <a href="../" class="back-link">← Back to home</a>
+    </div>
+  </header>
+
+  <main class="onboarding">
+    <div class="onboard-card">
+
+      <div class="progress" aria-hidden="true">
+        <div class="progress-bar"><span></span></div>
+        <p class="progress-text">Step <span id="step-current">1</span> of <span id="step-total">4</span></p>
+      </div>
+
+      <!-- Step 1: Welcome -->
+      <section class="step-screen active" data-step="1">
+        <div class="step-icon">👋</div>
+        <h1>Welcome to QForms</h1>
+        <p class="step-sub">Share your opinions, earn real rewards. Create your free account in under a minute.</p>
+
+        <ul class="perks">
+          <li><span>💵</span>Cash out to PayPal or bank</li>
+          <li><span>🎁</span>Gift cards &amp; prize draws</li>
+          <li><span>🔒</span>Your data stays private</li>
+        </ul>
+
+        <button type="button" class="btn btn-primary btn-block" data-next>
+          ✉️&nbsp; Continue with Email
+        </button>
+
+        <p class="fine">By continuing, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
+        <p class="switch">Already a member? <a href="#">Log in</a></p>
+      </section>
+
+      <!-- Step 2: Email -->
+      <section class="step-screen" data-step="2">
+        <button type="button" class="back-btn" data-prev>← Back</button>
+        <div class="step-icon">✉️</div>
+        <h1>What's your email?</h1>
+        <p class="step-sub">We'll use it to send you surveys and reward updates. No spam, ever.</p>
+
+        <form class="step-form" data-form="email" novalidate>
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+          <p class="error" id="email-error"></p>
+          <button type="submit" class="btn btn-primary btn-block">Continue</button>
+        </form>
+      </section>
+
+      <!-- Step 3: Profile -->
+      <section class="step-screen" data-step="3">
+        <button type="button" class="back-btn" data-prev>← Back</button>
+        <div class="step-icon">🙂</div>
+        <h1>Tell us about yourself</h1>
+        <p class="step-sub">This helps us match you with surveys you qualify for.</p>
+
+        <form class="step-form" data-form="profile" novalidate>
+          <label for="name">First name</label>
+          <input type="text" id="name" name="name" placeholder="Your first name" autocomplete="given-name" required />
+
+          <div class="row">
+            <div>
+              <label for="age">Age range</label>
+              <select id="age" name="age" required>
+                <option value="">Select</option>
+                <option>16–17</option>
+                <option>18–24</option>
+                <option>25–34</option>
+                <option>35–44</option>
+                <option>45–54</option>
+                <option>55+</option>
+              </select>
+            </div>
+            <div>
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender">
+                <option value="">Prefer not to say</option>
+                <option>Female</option>
+                <option>Male</option>
+                <option>Non-binary</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="country">Country</label>
+          <select id="country" name="country" required>
+            <option value="">Select your country</option>
+            <option>India</option>
+            <option>United Kingdom</option>
+            <option>United States</option>
+            <option>Canada</option>
+            <option>Australia</option>
+            <option>Germany</option>
+            <option>Other</option>
+          </select>
+
+          <p class="error" id="profile-error"></p>
+          <button type="submit" class="btn btn-primary btn-block">Continue</button>
+        </form>
+      </section>
+
+      <!-- Step 4: Interests -->
+      <section class="step-screen" data-step="4">
+        <button type="button" class="back-btn" data-prev>← Back</button>
+        <div class="step-icon">✨</div>
+        <h1>What are you into?</h1>
+        <p class="step-sub">Pick at least 3 topics. We'll send you surveys you'll actually enjoy.</p>
+
+        <form class="step-form" data-form="interests" novalidate>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="interests" value="tech" /><span>💻 Technology</span></label>
+            <label class="chip"><input type="checkbox" name="interests" value="food" /><span>🍔 Food &amp; Drink</span></label>
+            <label class="chip"><input type="checkbox" name="interests" value="travel" /><span>✈️ Travel</span></label>
+            <label class="chip"><input type="checkbox" name="interests" value="fashion" /><span>👗 Fashion</span></label>
+            <label class="chip"><input type="checkbox" name="interests" value="gaming" /><span>🎮 Gaming</span></label>
+            <label class="chip"><input type="checkbox" name="interests" value="health" /><span>💪 Health &amp; Fitness</span></label>
+            <label class="chip"><input type="checkbox" name="interests" value="finance" /><span>💰 Finance</span></label>
+            <label class="chip"><input type="checkbox" name="interests" value="auto" /><span>🚗 Automotive</span></label>
+            <label class="chip"><input type="checkbox" name="interests" value="entertainment" /><span>🎬 Entertainment</span></label>
+            <label class="chip"><input type="checkbox" name="interests" value="home" /><span>🏡 Home &amp; Garden</span></label>
+            <label class="chip"><input type="checkbox" name="interests" value="sports" /><span>⚽ Sports</span></label>
+            <label class="chip"><input type="checkbox" name="interests" value="beauty" /><span>💄 Beauty</span></label>
+          </div>
+          <p class="error" id="interests-error"></p>
+          <button type="submit" class="btn btn-primary btn-block">Create my account</button>
+        </form>
+      </section>
+
+      <!-- Step 5: Done -->
+      <section class="step-screen" data-step="5">
+        <div class="step-icon success">🎉</div>
+        <h1>You're in, <span id="done-name">friend</span>!</h1>
+        <p class="step-sub">We've sent a confirmation link to <strong id="done-email">your email</strong>. Verify it to unlock your first survey.</p>
+
+        <div class="bonus">
+          <span>🎁</span>
+          <div>
+            <strong>Welcome bonus unlocked</strong>
+            <p>Complete your first survey to claim it.</p>
+          </div>
+        </div>
+
+        <a href="../" class="btn btn-primary btn-block">Back to home</a>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="../js/register.js"></script>
+</body>
+</html>
